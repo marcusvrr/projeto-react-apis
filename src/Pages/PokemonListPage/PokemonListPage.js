@@ -8,7 +8,7 @@ function PokemonListPage() {
   const context = useContext(GlobalContext)
   const {pokemons} = context
 
-  const urlPokemon = pokemons.map((pokemon,index)=>{
+  const PokemonList = pokemons.map((pokemon,index)=>{
     return <Details key={index} url={pokemon.url} />
   })
 
@@ -17,7 +17,7 @@ function PokemonListPage() {
     <Container>
       <Header />
       <h1>Lista de Pokemons</h1>
-      <section>{urlPokemon}</section>
+      <section>{PokemonList}</section>
         
     </Container>
   );
