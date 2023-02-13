@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 16px;
-  min-width: 400px;
-  max-width: 440px;
+  padding: 15px;
+  padding-left: 1.0rem;
+  min-width: 500px;
+  max-width: 600px;
   background-color: ${(props) => props.color};
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   position: relative;
-  margin: 30px 10px;
+  margin: 20px 10px;
   color: white;
 `;
 
@@ -21,13 +22,16 @@ export const PokemonNumber = styled.p`
 `;
 
 export const PokemonName = styled.h1`
+display: flex;
   font-size: 32px;
-  width: 250px;
-  font-weight: 700;
+  margin-left: 0;
+  font-weight: 750;
   letter-spacing: 0em;
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   text-shadow: 2px 2px black;
+  justify-content: space-between;
+
 `;
 
 export const PokemonType = styled.img`

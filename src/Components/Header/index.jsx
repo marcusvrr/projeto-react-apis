@@ -26,9 +26,9 @@ function Header() {
       case "/pokedex":
         return (
           <>
-            <PrimaLogo src={Pikachu} alt="Pikachu" />
+            <Button colorScheme='blue' onClick={() => goToHomePage(navigate)} >Retornar a lista</Button>
             <img src={Logo} alt="Logo Pokemon" />
-            <Button colorScheme='blue' onClick={() => goToHomePage(navigate)} >Ver lista de pokemons</Button>
+            <PrimaLogo src={Pikachu} alt="Pikachu" />
 
           </>
         );
