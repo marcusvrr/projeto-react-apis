@@ -3,13 +3,13 @@ import pokebola from "../../img/pokebola-background.png";
 
 export const Container = styled.div`
   margin: 0 auto;
-  height: 100vh;
+  height: 90vh;
   background-color: #5e5e5e;
   h1 {
     color: white;
-    font-size: 3rem;
+    font-size: 4rem;
     margin-left: 5vw;
-    padding-top: 5vh;
+    padding-top: 3vh;
     margin-bottom: 5vh;
   }
 `;

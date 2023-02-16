@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   padding: 15px;
   padding-left: 1.0rem;
-  min-width: 500px;
+  min-width: 550px;
   max-width: 600px;
   background-color: ${(props) => props.color};
   border-radius: 10px;
@@ -60,15 +60,32 @@ export const CatchButton = styled.button`
   padding: 4px 10px;
   width: 146px;
   height: 38px;
-  background-color: ${(props) => props.color};
   border-radius: 8px;
-  border: none;
   cursor: pointer;
   position: absolute;
   bottom: 10px;
   right: 22px;
   z-index: 2;
-  color: ${(props) => props.colorText};
+  color: black;
+  background-color:white;
+`;
+
+export const RemoveButton = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  width: 146px;
+  height: 38px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 22px;
+  z-index: 2;
+  color: white;
+  background-color:red;
 `;
 
 export const Pokemon = styled.img`

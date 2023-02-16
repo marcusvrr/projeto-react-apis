@@ -1,5 +1,5 @@
 
-import { Container, ButtonDetails, CatchButton, Pokeball, Pokemon, PokemonName, PokemonNumber, PokemonType, TypesContainer } from "./PokemonCardStyle"
+import { Container, ButtonDetails, CatchButton, Pokeball, Pokemon, PokemonName, PokemonNumber, PokemonType, TypesContainer, RemoveButton } from "./PokemonCardStyle"
 import pokeball from "../../img/pokebola-background.png";
 import { getTypes } from "../../util/pokemon-types";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -14,12 +14,12 @@ function PokemonCard({ detailPokemon, id, name, type1, type2, img, cardColor }) 
   const location = useLocation();
 
   const context = useContext(GlobalContext)
-  const {addPokedex,removePokemon, filterPokedex } = context
+  const {addPokedex,removePokemon, setIsOpen, flow, setFlow } = context
 
   return (
     <Container color={cardColor}>
       <div>
-        <PokemonNumber>{id <= 9 ? `00${id}` : `0${id}`}</PokemonNumber>
+        <PokemonNumber>{id <= 9 ? `#00${id}` : `#0${id}`}</PokemonNumber>
         <PokemonName>{name}</PokemonName>
         <TypesContainer>
           {type2 ? (
@@ -36,19 +36,21 @@ function PokemonCard({ detailPokemon, id, name, type1, type2, img, cardColor }) 
       <div>
         <Pokemon src={img} alt={name} />
         {location.pathname === "/pokedex" ? (
-          <CatchButton
+          <RemoveButton
             onClick={() => {
+              setFlow(2);console.log(flow);             
+              setIsOpen(true);
               removePokemon(detailPokemon);
             }}
           >
             Excluir
-          </CatchButton>
+          </RemoveButton>
         ) : (
           <CatchButton
             onClick={() => {
-              addPokedex(detailPokemon)
-              filterPokedex(detailPokemon)
-              
+              setFlow(1);               
+              setIsOpen(true);
+              addPokedex(detailPokemon);
             }}
           >
             Capturar!

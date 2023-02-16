@@ -2,22 +2,21 @@ import { useContext } from "react";
 import Details from "../../Components/Details/Detail.js";
 import Header from "../../Components/Header/index.jsx";
 import { GlobalContext } from "../../Global/GlobalContext.js";
-import { Container, ContentCard } from "./PokemonListStyle.js";
+import { Container, } from "./PokemonListStyle.js";
 
 function PokemonListPage() {
   const context = useContext(GlobalContext)
-  const {pokemons} = context
+  const {pokemons,pokedex} = context
 
-  const PokemonList = pokemons.map((pokemon,index)=>{
-    return <Details key={index} url={pokemon.url} />
-  })
+  const filteredPokemon = pokemons.filter(pokemon => !pokedex.find(captured => pokemon.name === captured.name));
+  const pokemonListItems = filteredPokemon.map(pokemon => <Details key={pokemon.name} url={pokemon.url} />);
 
 
   return (
     <Container>
       <Header />
-      <h1>Lista de Pokemons</h1>
-      <section>{PokemonList}</section>
+      <h1>Todos Pokémons</h1>
+      <section>{pokemonListItems}</section>
         
     </Container>
   );
