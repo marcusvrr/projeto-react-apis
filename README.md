@@ -56,23 +56,23 @@ Este projeto terá como fonte de dados para a sua criação a [Poke Api](https:/
 
 ### Home Page
 
-![Home Page](https://github.com/hammes22/Pokedex/raw/main/images/pokedex_Page.png)
+![Home Page](https://raw.githubusercontent.com/marcusvrr/projeto-react-apis/66e7ba20de3d8094359775eaf5e4947aab6e8746/src/img/PrintDaHome.png)
 
 ### Adicionar na Pokédex
 
-![Adicionar na Pokédex](https://github.com/hammes22/Pokedex/raw/main/images/adicionarPokedex.png)
+![Adicionar na Pokédex](https://raw.githubusercontent.com/marcusvrr/projeto-react-apis/66e7ba20de3d8094359775eaf5e4947aab6e8746/src/img/printCapturar.png)
 
 ### Remover da Pokédex
 
-![Remover da Pokédex](https://github.com/hammes22/Pokedex/raw/main/images/removerPokedex.png)
+![Remover da Pokédex](https://raw.githubusercontent.com/marcusvrr/projeto-react-apis/66e7ba20de3d8094359775eaf5e4947aab6e8746/src/img/printRemover.png)
 
 ### Pokédex
 
-![Pokédex](https://github.com/hammes22/Pokedex/raw/main/images/pokedex_Page.png)
+![Pokédex](https://raw.githubusercontent.com/marcusvrr/projeto-react-apis/66e7ba20de3d8094359775eaf5e4947aab6e8746/src/img/printPokedex.png)
 
 ### Detalhes Page
 
-![Detalhes Page](https://github.com/hammes22/Pokedex/raw/main/images/detalhes_page.png)
+![Detalhes Page](https://raw.githubusercontent.com/marcusvrr/projeto-react-apis/66e7ba20de3d8094359775eaf5e4947aab6e8746/src/img/printDetalhes.png)
 
 
 				
