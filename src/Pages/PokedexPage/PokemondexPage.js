@@ -5,20 +5,22 @@ import { Container, ContainerCard, Title } from "./PokedexStyle";
 import { GlobalContext } from "../../Global/GlobalContext";
 import { getColors } from "../../util/card-color";
 
-function PokedexPage(props) {
+function PokedexPage() {
 
   const context = useContext(GlobalContext)
-  const {pokedex} = context
+  const {pokedex} = context;
 
   return (
     <>
       <Header />
       <Container>
         <Title>
-        <h1> Pokedex: Meus Pokémons</h1>
+        <h1>Meus Pokémons</h1>
         </Title>
         <ContainerCard>
-        {pokedex.map((detailPokemon) => {
+        {pokedex
+        .sort((a, b) => (a.id > b.id ? 1 : -1))
+        .map((detailPokemon) => {
           return (
             <PokemonCard key={detailPokemon.name}
             detailPokemon={detailPokemon}
